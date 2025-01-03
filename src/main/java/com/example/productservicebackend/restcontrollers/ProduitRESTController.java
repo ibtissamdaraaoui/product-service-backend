@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.nadhem.produits.entities.Produit;
-import com.nadhem.produits.service.ProduitService;
+import com.example.productservicebackend.entities.Produit;
+import com.example.productservicebackend.service.ProduitService;
 
 @RestController
 @RequestMapping("/api")

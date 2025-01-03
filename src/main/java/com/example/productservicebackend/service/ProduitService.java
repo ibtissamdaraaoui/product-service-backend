@@ -2,8 +2,8 @@ package com.example.productservicebackend.service;
 
 import java.util.List;
 
-import com.nadhem.produits.entities.Categorie;
-import com.nadhem.produits.entities.Produit;
+import com.example.productservicebackend.entities.Categorie;
+import com.example.productservicebackend.entities.Produit;
 
 public interface ProduitService {
 	

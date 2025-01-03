@@ -8,19 +8,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.nadhem.produits.entities.Categorie;
-import com.nadhem.produits.entities.Produit;
-import com.nadhem.produits.repos.ImageRepository;
-import com.nadhem.produits.repos.ProduitRepository;
+import com.example.productservicebackend.entities.Categorie;
+import com.example.productservicebackend.entities.Produit;
+import com.example.productservicebackend.repos.ProduitRepository;
 
 @Service
 public class ProduitServiceImpl implements ProduitService {
 
 	@Autowired
 	ProduitRepository produitRepository;
-	
-	@Autowired
-	ImageRepository imageRepository;
+
 	
 	
 	
@@ -58,12 +55,7 @@ public class ProduitServiceImpl implements ProduitService {
 	   
 	   //supprimer l'image avant de supprimer le produit
 	    Produit p = getProduit(id);
-	   try {
-		Files.delete(Paths.get(System.getProperty("user.home")+"/images/"+p.getImagePath()));
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
+
 		produitRepository.deleteById(id);
 		
 	}
