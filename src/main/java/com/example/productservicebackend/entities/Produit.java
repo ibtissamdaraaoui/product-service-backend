@@ -24,6 +24,9 @@ public class Produit {
 	@ManyToOne
 	private Categorie categorie;
 
+	@OneToOne
+	private Image image;
+
 	public Produit() {
 		super();
 	}
